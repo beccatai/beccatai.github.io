@@ -20,19 +20,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="进步">
-<meta property="og:type" content="website">
-<meta property="og:title" content="分类">
-<meta property="og:url" content="http://example.com/categories/index.html">
+  <meta name="description" content="一些关于mysql的基础，忘记了可以来看一眼">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mysql 基础">
+<meta property="og:url" content="http://example.com/2023/06/06/mysql-%E5%9F%BA%E7%A1%80/index.html">
 <meta property="og:site_name" content="Rebecca">
-<meta property="og:description" content="进步">
+<meta property="og:description" content="一些关于mysql的基础，忘记了可以来看一眼">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-05-24T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-05-27T09:28:22.811Z">
+<meta property="article:published_time" content="2023-06-05T17:03:34.000Z">
+<meta property="article:modified_time" content="2023-06-05T17:12:58.952Z">
 <meta property="article:author" content="RebeccaTai">
+<meta property="article:tag" content="mysql">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/categories/">
+<link rel="canonical" href="http://example.com/2023/06/06/mysql-%E5%9F%BA%E7%A1%80/">
 
 
 <script id="page-configurations">
@@ -40,13 +41,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>分类 | Rebecca
-</title>
+  <title>mysql 基础 | Rebecca</title>
   
 
 
@@ -159,51 +159,171 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="zh-CN">
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/06/mysql-%E5%9F%BA%E7%A1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="RebeccaTai">
+      <meta itemprop="description" content="进步">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rebecca">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          mysql 基础
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">分类
-</h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
 
-<div class="post-meta">
+              <time title="创建时间：2023-06-06 01:03:34 / 修改时间：01:12:58" itemprop="dateCreated datePublished" datetime="2023-06-06T01:03:34+08:00">2023-06-06</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/mysql/" itemprop="url" rel="index"><span itemprop="name">mysql</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>一些关于mysql的基础，忘记了可以来看一眼</p>
+<span id="more"></span>
+
+<p><strong>数据类型：</strong></p>
+<p><code>char,varchar</code>（字符，变长字符）</p>
+<p><code>int,bigint</code>(数字，变长数字）</p>
+<p><code>data</code>(日期） <code>datetime</code>(日期时间）</p>
+<p><code>float</code> (浮点数）</p>
+<p><code>default null,not null</code>(空，非空）</p>
+<p><code>double</code>(双浮点数）</p>
+<p><code>dec</code>(小数，十进制）</p>
+<p><strong>基本操作</strong></p>
+<ol>
+<li>登录数据库 <code>mysql -u root -p</code> （回车后输入密码）</li>
+<li>查看系统中数据库 <code>show databases</code>;</li>
+<li>导入数据库：<code>source/xx/库.sql</code>;（备份后才有数据）</li>
+<li>创建数据库：<code>create database 数据库名</code>；</li>
+<li>查看库的创建语句 ：<code>show create database 数据库名</code></li>
+<li>选择使用数据库：<code>use 数据库名</code></li>
+<li>查看数据库中的表：<code>show tables</code></li>
+<li>创建数据表<code>create table表名</code>（列名，类型，是否为空</li>
+<li>查看表的创建语句 <code>show create table 表名</code></li>
+<li>为表添加默认字体：<code>default charset =utf8</code>;</li>
+<li>设置字体 ：<code>set names utf8</code>;</li>
+<li>查看字体：<code>show variables like ‘%char%</code>’</li>
+<li>set 设置：<code>names:   名字</code>，给…命名</li>
+</ol>
+<p>​                       <code>default</code>:  默认</p>
+<p>​                       <code>charset</code>:   字符集</p>
+<p>14.设置主键 <code>alter table 表名 add primary key</code> （数据）；</p>
+<p>15.查看表结构：<code>desc/describe表名</code>；</p>
+<p>16.插入表数据 <code>insert into 表名 values</code>(‘参数’,’参数’,’参数’);</p>
+<p>17.查询数据表  <code>select * from</code> 表名；</p>
+<p>18.修改参数： <code>update 表名 set 数据 = &#39;参数&#39; where 数据=&#39;参数&#39;</code>;</p>
+<p>Update 表名 set 要修改的值&#x3D; ‘修改后的参数” where 数据&#x3D; ‘要修改的参数所在行的参数’</p>
+<p>19.删除行  <code>delete from 表名 where 数据= ‘参数’</code></p>
+<p>20.修改表名 <code>alter table 旧表名 rename 新表名</code></p>
+<p>21.修改列名 <code>alter table 表名 change column 旧列名 新列名 数据类型</code>；</p>
+<p>22.删除列 <code>alter table 表名 drop column列名</code></p>
+<p>23.删除表里全部数据 <code>delete from 表名</code>；</p>
+<p>24.删除数据表 <code>drop table 表名</code>；</p>
+<p>25.删除数据库 <code>drop database库名</code>；</p>
+<p><strong>查询</strong></p>
+<p>1.数据库例查询 <code>select 数据,数据 from 表名</code>;</p>
+<p>2.数据库精确查询 <code>select *from 表名where 数据=‘参数’or 数据  = &#39;参数&#39;</code>;</p>
+<p>3.select 数据,数据 from表名 where 数据&gt;5000;</p>
+<p>&gt;(大于）   &lt;(小于）   &lt;&#x3D;&gt;(等于）   !&#x3D;(不等于）</p>
+<p>between…and()在…之间</p>
+<p>or()什么或什么</p>
+<p>in()在什么值里面</p>
+<p>4.模糊查询：<code>select *from 表名 where 数据like ‘%0%’</code> ;</p>
+<p>5.两者之间查询：<code>select * from 表名 where 数据 between 1 and 10</code></p>
+<p>6.非空查询 <code>select * from 表名 where 数据 is null</code></p>
+<p>7.In查询<code>select * from 表名 8.where 数据 in(“,”…)</code></p>
+<p>9.分组查询 <code>select * from 表名 group by 数据 having (过滤)</code></p>
+<p>10.排序查询<code>select * from 表名 group by 数据  asc(升序) desc(降序)</code></p>
+<p><code>Select* from 表名 order by 数据 升序降序</code></p>
+<p>11.聚合函数   <code>select 函数（数据）from 表名</code>；</p>
+<p>12.嵌套查询 <code>select * from 表名 where 数据&gt;(select数据from 表名 where 数据=&#39;参数&#39;)</code></p>
+<p>13.分页查询 <code>select * from 表名 where 数据 limit</code>（范围、限制）</p>
+<p>过滤重复查询 <code>select distinct*from 表名</code>；</p>
+<p><strong>多表查询</strong></p>
+<p>select表.数据, 表.数据from 表join 表 where表.数据&#x3D; 表.数据；</p>
+<p>select*from 表 join 表on 表.数据&#x3D;表.数据 where数据&#x3D;’参数‘；</p>
+<p>select * from 表 , 表where表.数据&#x3D; 表.数据 and 数据&gt;5000;</p>
+<p>select * from 表a,表b where表.数据&#x3D; 表.数据 and a.数据&gt;5000;</p>
+<p>创建视图：<code>create view 视图名 as 查询出来的表</code></p>
+<p>删除视图：<code>drop view 视图名</code></p>
+<p>查询版本号和当前日期： <code>select version(),current_date</code></p>
+<p>计算器：<code>select 公式算法</code> eg:<code>select 30+7*10</code></p>
+<p>备份数据库：<code>mysqldump -u root -p库名&gt;备份到的路径和文件名.sql</code></p>
+<p>还原数据库：<code>mysql -u root -p 库名&lt;备份包所在的路径和备份名.sql</code></p>
+<p>删除安装文件:<code>rpm -e</code></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/mysql/" rel="tag"># mysql</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/06/04/%E6%99%9A%E5%AE%89/" rel="prev" title="晚安">
+      <i class="fa fa-chevron-left"></i> 晚安
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          <div class="category-all-page">
-            <div class="category-all-title">
-              目前共计 4 个分类
-            </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/mysql/">mysql</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/">碎碎念</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9B%A8%E5%A4%A9%E6%95%85%E4%BA%8B%E7%9B%92/">雨天故事盒</a><span class="category-list-count">1</span></li></ul>
-            </div>
-          </div>
-        
-      </div>
-      
-      
-      
-    </div>
-    
-
-    
-    
-    
 
 
           </div>
